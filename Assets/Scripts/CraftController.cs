@@ -79,8 +79,6 @@ public class CraftController : MonoBehaviour
 
         if (newItem != null)
             winPanel.SetActive(true);
-        else
-            _resultSlot.ResetItem();
     }
 
     public void CraftItem()

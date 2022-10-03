@@ -19,8 +19,8 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     private void Awake()
     {
         image = GetComponent<Image>();
-        itemImage = transform.GetChild(0).GetComponent<Image>();
-        itemAmount = transform.GetChild(1).GetComponent<Text>();
+        itemImage = this.transform.GetChild(0).GetComponent<Image>();
+        itemAmount = this.transform.GetChild(1).GetComponent<Text>();
 
         itemImage.preserveAspect = true;
     }
