@@ -273,5 +273,97 @@ public class ItemsManager : MonoBehaviour
             {null, items[10]}
         };
         items.Add(new Item("Fire", itemSprites[1], new CraftRecipie(fireRecepie, 1)));
+        //Cake
+        var cakeRecepie = new Item[,]
+        {
+            {items[28], items[28], items[28]},
+            {items[30], items[29], items[30]},
+            {items[31], items[31], items[31]},
+        };
+        items.Add(new Item("Cake", itemSprites[1], new CraftRecipie(cakeRecepie, 1)));
+        //Vagonette
+        var vagonetteRecepie = new Item[,]
+        {
+            {items[12], null, items[12]},
+            {items[12], items[12], items[12]},
+        };
+        items.Add(new Item("Vagonette", itemSprites[1], new CraftRecipie(vagonetteRecepie, 1)));
+        //Rail
+        var railRecepie = new Item[,]
+        {
+            {items[12], null, items[12]},
+            {items[12], items[2], items[12]},
+            {items[12], null, items[12]},
+        };
+        items.Add(new Item("Rail", itemSprites[1], new CraftRecipie(railRecepie, 1)));
+        //EnchTable
+        var enchTableRecepie = new Item[,]
+        {
+            {null, items[8], null},
+            {items[4], items[9], items[4]},
+            {items[9], items[9], items[9]},
+        };
+        items.Add(new Item("EnchTable", itemSprites[1], new CraftRecipie(enchTableRecepie, 1)));
+        //EnchTable
+        var cookieRecepie = new Item[,]
+        {
+            {items[31], items[36], items[31]}
+        };
+        items.Add(new Item("Cookie", itemSprites[1], new CraftRecipie(cookieRecepie, 1)));
+        //Saddle
+        var saddleRecepie = new Item[,]
+        {
+            {items[42], items[42], items[42]},
+            {items[42], items[16], items[42]},
+            {items[12], null, items[12]}
+        };
+        items.Add(new Item("Saddle", itemSprites[1], new CraftRecipie(saddleRecepie, 1)));
+        //Cell
+        var cellRecepie = new Item[,]
+        {
+            {items[12], items[12], items[12]},
+            {items[12], items[12], items[12]}
+        };
+        items.Add(new Item("Cell", itemSprites[1], new CraftRecipie(cellRecepie, 1)));
+        //Note Block
+        var noteBlockRecepie = new Item[,]
+        {
+            {items[1], items[1], items[1]},
+            {items[1], items[11], items[1]},
+            {items[1], items[1], items[1]}
+        };
+        items.Add(new Item("NoteBlock", itemSprites[1], new CraftRecipie(noteBlockRecepie, 1)));
+        //Musical Block
+        var musicalBlockRecepie = new Item[,]
+        {
+            {items[1], items[1], items[1]},
+            {items[1], items[4], items[1]},
+            {items[1], items[1], items[1]}
+        };
+        items.Add(new Item("MusicalBlock", itemSprites[1], new CraftRecipie(musicalBlockRecepie, 1)));
+        //LIghtHouse
+        var lighthouseRecepie = new Item[,]
+        {
+            {items[43], items[43], items[43]},
+            {items[43], items[44], items[43]},
+            {items[9], items[9], items[9]}
+        };
+        items.Add(new Item("LIghtHouse", itemSprites[1], new CraftRecipie(lighthouseRecepie, 1)));
+        //Chest
+        var chestRecepie = new Item[,]
+        {
+            {items[1], items[1], items[1]},
+            {items[1], null, items[1]},
+            {items[1], items[1], items[1]}
+        };
+        items.Add(new Item("Chest", itemSprites[1], new CraftRecipie(chestRecepie, 1)));
+        //Freature
+        var freatureRecepie = new Item[,]
+        {
+            {items[7], items[7], items[7]},
+            {items[7], null, items[7]},
+            {items[7], items[7], items[7]}
+        };
+        items.Add(new Item("Freature", itemSprites[1], new CraftRecipie(freatureRecepie, 1)));
     }
 }

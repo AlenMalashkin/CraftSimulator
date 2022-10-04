@@ -77,12 +77,121 @@ public class InventoryController : MonoBehaviour
             case "Fire":
                 InitFireCraftInventory();
             break;
+            case "Cake":
+                InitCakeCraftInventory();
+            break;
+            case "Vagonette":
+                InitVagonetteCraftInventory();
+            break;
+            case "Rail":
+                InitRailCraftInventory();
+            break;
+            case "EnchTable":
+                InitEnchTableCraftInventory();
+            break;
+            case "Cookie":
+                InitCookieCraftInventory();
+            break;
+            case "Saddle":
+                InitSaddleCraftInventory();
+            break;
+            case "Cell":
+                InitCellCraftInventory();
+            break;
+            case "NoteBlock":
+                InitNoteBlockCraftInventory();
+            break;
+            case "MusicalBlock":
+                InitMusicalBlockCraftInventory();
+            break;
+            case "LIghtHouse":
+                InitLighthouseCraftInventory();
+            break;
+            case "Chest":
+                InitChestCraftInventory();
+            break;
+            case "Freature":
+                InitFreatureCraftInventory();
+            break;
         }
     }
 
     public void InitStickCraftInventory()
     {
         _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[1], 2));
+    }
+
+    public void InitChestCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[1], 8));
+    }
+
+    public void InitFreatureCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[7], 8));
+    }
+
+    public void InitLighthouseCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[9], 3));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[43], 5));
+        _mainSlots[0, 2].SetItem(new ItemInSlot(ItemsManager.instance.items[44], 1));
+    }
+
+    public void InitMusicalBlockCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[1], 8));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 1));
+    }
+
+    public void InitNoteBlockCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[1], 8));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[11], 1));
+    }
+
+    public void InitCellCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[12], 6));
+    }
+
+    public void InitSaddleCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[12], 2));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[16], 1));
+        _mainSlots[0, 2].SetItem(new ItemInSlot(ItemsManager.instance.items[42], 5));
+    }
+
+    public void InitCookieCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[36], 1));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[31], 2));
+    }
+
+    public void InitEnchTableCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[9], 4));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 2));
+        _mainSlots[0, 2].SetItem(new ItemInSlot(ItemsManager.instance.items[8], 1));
+    }
+
+    public void InitRailCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[2], 1));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[12], 6));
+    }
+
+    public void InitVagonetteCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[12], 5));
+    }
+
+    public void InitCakeCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[28], 3));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[29], 1));
+        _mainSlots[0, 2].SetItem(new ItemInSlot(ItemsManager.instance.items[30], 2));
+        _mainSlots[0, 3].SetItem(new ItemInSlot(ItemsManager.instance.items[31], 3));
     }
 
     public void InitFireCraftInventory()
