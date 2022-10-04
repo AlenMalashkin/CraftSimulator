@@ -7,28 +7,88 @@ public class InventoryController : MonoBehaviour
     public Slot[,] _mainSlots { get; private set; }
     public Slot[,] _additionalSlot { get; private set; }
 
-    [SerializeField]
-    private GameObject slotPref;
-    [SerializeField]
-    private Transform mainSlotGrid;
+    [SerializeField] private GameObject slotPref;
+    [SerializeField] private Transform mainSlotGrid;
 
     public void Init()
     {
-        InitTestInventory();
-    }
+        string itemName = PlayerPrefs.GetString("currentCraftItemName");
 
-    public void InitTestInventory()
-    {
         _mainSlots = new Slot[1, 9];
 
         CreateSlotsPrefsbs();
 
-        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[0], 4));
-        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[1], 4));
-        _mainSlots[0, 2].SetItem(new ItemInSlot(ItemsManager.instance.items[2], 4));
-        _mainSlots[0, 3].SetItem(new ItemInSlot(ItemsManager.instance.items[3], 4));
-        _mainSlots[0, 4].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 4));
-        _mainSlots[0, 5].SetItem(new ItemInSlot(ItemsManager.instance.items[5], 1));
+        switch(itemName)
+        {
+            case "Stick":
+                InitStickCraftInventory();
+            break;
+            case "Diamond Sword":
+                InitSwordCraftInventory();
+            break;
+            case "Compass":
+                InitCompassCraftInventory();
+            break;
+            case "Axe":
+                InitAxeCraftInventory();
+            break;
+            case "Arrow":
+                InitArrowCraftInventory();
+            break;
+            case "Clock":
+                InitClockCraftInventory();
+            break;
+            case "Pants":
+                InitPantsCraftInventory();
+            break;
+            case "Boots":
+                InitBootsCraftInventory();
+            break;
+        }
+    }
+
+    public void InitStickCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[1], 2));
+    }
+
+    public void InitSwordCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[2], 1));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 2));
+    }
+    public void InitPantsCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 7));
+    }
+    public void InitBootsCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 4));
+    }
+
+    public void InitCompassCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[11], 1));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[12], 4));
+    }
+
+    public void InitAxeCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[2], 2));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 3));
+    }
+
+    public void InitArrowCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[2], 1));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[10], 1));
+        _mainSlots[0, 2].SetItem(new ItemInSlot(ItemsManager.instance.items[17], 1));
+    }
+
+    public void InitClockCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[11], 1));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[15], 4));
     }
     
     public void InitCraftInventory(int itemInventoryIndex, int itemIndex, int itemsCount)

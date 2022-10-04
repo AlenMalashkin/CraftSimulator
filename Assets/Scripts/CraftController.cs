@@ -17,6 +17,8 @@ public class CraftController : MonoBehaviour
 
     public bool HasResultItem => _resultSlot._item != null;
 
+    private Color32 craftedItemColor = new Color32(255, 255, 255, 255);
+
     public void Init()
     {
         _craftTable = new CraftSlot[3, 3];
@@ -77,8 +79,11 @@ public class CraftController : MonoBehaviour
                 break;
             }
 
-        if (newItem != null)
+        if (newItem != null && newItem._item._name == PlayerPrefs.GetString("currentCraftItemName"))
+        {
             winPanel.SetActive(true);
+            PlayerPrefs.SetString(newItem._item._name + "Color", (string) JsonUtility.ToJson(craftedItemColor));
+        }
     }
 
     public void CraftItem()

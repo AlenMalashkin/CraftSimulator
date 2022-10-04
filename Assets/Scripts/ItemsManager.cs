@@ -62,7 +62,7 @@ public class ItemsManager : MonoBehaviour
             { items[3]},
             { items[2]}
         };
-        items.Add(new Item("Stick", itemSprites[6], new CraftRecipie(torchRecipie, 4)));
+        items.Add(new Item("Torch", itemSprites[6], new CraftRecipie(torchRecipie, 4)));
         //Cobblestone
         items.Add(new Item("Cobblestone", itemSprites[7]));
         //Book
@@ -76,7 +76,13 @@ public class ItemsManager : MonoBehaviour
         //Iron Bar 
         items.Add(new Item("Iron Bar", itemSprites[12]));
         //Compass
-        items.Add(new Item("Compass", itemSprites[13]));
+        var compassRecepie = new Item[,]
+        {
+            { null, items[12], null },
+            { items[12],  items[11], items[12] },
+            { null,  items[12], null }
+        };
+        items.Add(new Item("Compass", itemSprites[13], new CraftRecipie(compassRecepie, 1)));
         //List
         items.Add(new Item("List", itemSprites[14]));
         //Gold bar
@@ -151,5 +157,45 @@ public class ItemsManager : MonoBehaviour
         items.Add(new Item("Fire ash", itemSprites[49]));
         //Железная решëтка
         items.Add(new Item("Железная решëтка", itemSprites[50]));
+        //Diamond Sword
+        var swordRecipie = new Item[,]
+        {
+            {items[4]},
+            {items[4]},
+            {items[2]}
+        };
+        items.Add(new Item("Diamond Sword", itemSprites[51], new CraftRecipie(swordRecipie, 1)));
+        //Axe
+        var axeRecepie = new Item[,]
+        {
+            { items[4], items[4] },
+            { items[4], items[2] },
+            { null,  items[2] }
+        };
+        items.Add(new Item("Axe", itemSprites[52], new CraftRecipie(axeRecepie, 1)));
+        //Arrow
+        var arrowRecepie = new Item[,]
+        {
+            { items[10] },
+            { items[2] },
+            { items[17] }
+        };
+        items.Add(new Item("Arrow", itemSprites[53], new CraftRecipie(arrowRecepie, 1)));
+        //Clock
+        var clockRecepie = new Item[,]
+        {
+            { null, items[15], null },
+            { items[15],  items[11], items[15] },
+            { null,  items[15], null }
+        };
+        items.Add(new Item("Clock", itemSprites[54], new CraftRecipie(clockRecepie, 1)));
+        //Pants
+        var pantsRecepie = new Item[,]
+        {
+            { items[4], items[4], items[4] },
+            { items[4],  null, items[4] },
+            { items[4],  null, items[4] }
+        };
+        items.Add(new Item("Pants", itemSprites[55], new CraftRecipie(pantsRecepie, 1)));
     }
 }
