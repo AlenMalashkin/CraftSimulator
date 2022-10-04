@@ -44,12 +44,108 @@ public class InventoryController : MonoBehaviour
             case "Boots":
                 InitBootsCraftInventory();
             break;
+            case "Hoe":
+                InitHoeCraftInventory();
+            break;
+            case "Cut":
+                InitCutCraftInventory();
+            break;
+            case "Pickaxe":
+                InitPickaxeCraftInventory();
+            break;
+            case "GApple":
+                InitGAppleCraftInventory();
+            break;
+            case "TNT":
+                InitTNTCraftInventory();
+            break;
+            case "Torch":
+                InitTorchCraftInventory();
+            break;
+            case "Helmet":
+                InitHelmetCraftInventory();
+            break;
+            case "Armor":
+                InitArmorCraftInventory();
+            break;
+            case "Rod":
+                InitRodCraftInventory();
+            break;
+            case "EnderChest":
+                InitEnderChestCraftInventory();
+            break;
+            case "Fire":
+                InitFireCraftInventory();
+            break;
         }
     }
 
     public void InitStickCraftInventory()
     {
         _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[1], 2));
+    }
+
+    public void InitFireCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[10], 1));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[12], 1));
+    }
+
+    public void InitEnderChestCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[40], 1));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[9], 8));
+    }
+
+    public void InitRodCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[2], 3));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[16], 2));
+    }
+
+    public void InitArmorCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 8));
+    }
+
+    public void InitHelmetCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 5));
+    }
+
+    public void InitTorchCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[3], 1));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[2], 1));
+    }
+
+    public void InitTNTCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[19], 4));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[18], 5));
+    }
+
+    public void InitGAppleCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[34], 1));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[51], 8));
+    }
+
+    public void InitPickaxeCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[2], 2));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 3));
+    }
+
+    public void InitCutCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[12], 2));
+    }
+
+    public void InitHoeCraftInventory()
+    {
+        _mainSlots[0, 0].SetItem(new ItemInSlot(ItemsManager.instance.items[4], 2));
+        _mainSlots[0, 1].SetItem(new ItemInSlot(ItemsManager.instance.items[2], 2));
     }
 
     public void InitSwordCraftInventory()

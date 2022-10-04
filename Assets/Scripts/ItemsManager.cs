@@ -48,13 +48,7 @@ public class ItemsManager : MonoBehaviour
         items.Add(new Item("Diamond", itemSprites[4]));
 
         //Diamond pickaxe
-        var pickakeRecepie = new Item[,]
-        {
-            { items[4], items[4], items[4] },
-            {null,  items[2], null },
-            {null,  items[2], null}
-        };
-        items.Add(new Item("Diamond Pickaxe", itemSprites[5], new CraftRecipie(pickakeRecepie, 1)));
+        items.Add(new Item("Diamond Pickaxe", itemSprites[5]));
 
         //Torch
         var torchRecipie = new Item[,]
@@ -157,6 +151,11 @@ public class ItemsManager : MonoBehaviour
         items.Add(new Item("Fire ash", itemSprites[49]));
         //Железная решëтка
         items.Add(new Item("Железная решëтка", itemSprites[50]));
+        //Golden Ignot
+        items.Add(new Item("Golden Ignot", itemSprites[51]));
+
+        // Craft items
+
         //Diamond Sword
         var swordRecipie = new Item[,]
         {
@@ -164,7 +163,7 @@ public class ItemsManager : MonoBehaviour
             {items[4]},
             {items[2]}
         };
-        items.Add(new Item("Diamond Sword", itemSprites[51], new CraftRecipie(swordRecipie, 1)));
+        items.Add(new Item("Diamond Sword", itemSprites[1], new CraftRecipie(swordRecipie, 1)));
         //Axe
         var axeRecepie = new Item[,]
         {
@@ -172,7 +171,7 @@ public class ItemsManager : MonoBehaviour
             { items[4], items[2] },
             { null,  items[2] }
         };
-        items.Add(new Item("Axe", itemSprites[52], new CraftRecipie(axeRecepie, 1)));
+        items.Add(new Item("Axe", itemSprites[1], new CraftRecipie(axeRecepie, 1)));
         //Arrow
         var arrowRecepie = new Item[,]
         {
@@ -180,7 +179,7 @@ public class ItemsManager : MonoBehaviour
             { items[2] },
             { items[17] }
         };
-        items.Add(new Item("Arrow", itemSprites[53], new CraftRecipie(arrowRecepie, 1)));
+        items.Add(new Item("Arrow", itemSprites[1], new CraftRecipie(arrowRecepie, 1)));
         //Clock
         var clockRecepie = new Item[,]
         {
@@ -188,7 +187,7 @@ public class ItemsManager : MonoBehaviour
             { items[15],  items[11], items[15] },
             { null,  items[15], null }
         };
-        items.Add(new Item("Clock", itemSprites[54], new CraftRecipie(clockRecepie, 1)));
+        items.Add(new Item("Clock", itemSprites[1], new CraftRecipie(clockRecepie, 1)));
         //Pants
         var pantsRecepie = new Item[,]
         {
@@ -196,6 +195,83 @@ public class ItemsManager : MonoBehaviour
             { items[4],  null, items[4] },
             { items[4],  null, items[4] }
         };
-        items.Add(new Item("Pants", itemSprites[55], new CraftRecipie(pantsRecepie, 1)));
+        items.Add(new Item("Pants", itemSprites[1], new CraftRecipie(pantsRecepie, 1)));
+        //Hoe
+        var hoeRecepie = new Item[,]
+        {
+            { items[4], items[4] },
+            { null, items[2] },
+            { null,  items[2] }
+        };
+        items.Add(new Item("Hoe", itemSprites[1], new CraftRecipie(hoeRecepie, 1)));
+        //Cut
+        var cutRecepie = new Item[,]
+        {
+            { null, items[12] },
+            { items[12], null }
+        };
+        items.Add(new Item("Cut", itemSprites[1], new CraftRecipie(cutRecepie, 1)));
+        //Pickaxe
+        var pickakeRecepie = new Item[,]
+        {
+            { items[4], items[4], items[4] },
+            {null,  items[2], null },
+            {null,  items[2], null}
+        };
+        items.Add(new Item("Pickaxe", itemSprites[1], new CraftRecipie(pickakeRecepie, 1)));
+        //GApple
+        var gappleRecepie = new Item[,]
+        {
+            {items[51], items[51], items[51]},
+            {items[51],  items[34], items[51]},
+            {items[51],  items[51], items[51]}
+        };
+        items.Add(new Item("GApple", itemSprites[1], new CraftRecipie(gappleRecepie, 1)));
+        //TNT
+        var tntRecepie = new Item[,]
+        {
+            {items[18], items[19], items[18]},
+            {items[19],  items[18], items[19]},
+            {items[18],  items[19], items[18]}
+        };
+        items.Add(new Item("TNT", itemSprites[1], new CraftRecipie(tntRecepie, 1)));
+        //Helmet
+        var helmetRecepie = new Item[,]
+        {
+            {items[4], items[4], items[4]},
+            {items[4],  null, items[4]},
+        };
+        items.Add(new Item("Helmet", itemSprites[1], new CraftRecipie(helmetRecepie, 1)));
+        //Helmet
+        var armorRecepie = new Item[,]
+        {
+            {items[4], null, items[4]},
+            {items[4],  items[4], items[4]},
+            {items[4],  items[4], items[4]},
+        };
+        items.Add(new Item("Armor", itemSprites[1], new CraftRecipie(armorRecepie, 1)));
+        //Rod
+        var rodRecepie = new Item[,]
+        {
+            {null, null, items[2]},
+            {null, items[2], items[16]},
+            {items[2], null, items[16]},
+        };
+        items.Add(new Item("Rod", itemSprites[1], new CraftRecipie(rodRecepie, 1)));
+        //Ender Chest
+        var enderChestRecepie = new Item[,]
+        {
+            {items[9], items[9], items[9]},
+            {items[9], items[40], items[9]},
+            {items[9], items[9], items[9]},
+        };
+        items.Add(new Item("EnderChest", itemSprites[1], new CraftRecipie(enderChestRecepie, 1)));
+        //Fire
+        var fireRecepie = new Item[,]
+        {
+            {items[12], null},
+            {null, items[10]}
+        };
+        items.Add(new Item("Fire", itemSprites[1], new CraftRecipie(fireRecepie, 1)));
     }
 }
